@@ -1,0 +1,14 @@
+.message {
+    padding: 5px;
+}
+
+.inputText {
+    padding: 5px;
+    display: inline-block;
+}
+
+.acceptButton {
+    padding: 5px;
+    text-align: end;
+    display: inline-block;
+}

@@ -1,0 +1,18 @@
+<template>
+    <div class="message">
+        <p>{myMassageToPage}</p> 
+    </div>
+    <lightning-button-group>
+        <div class="inputText">
+            <lightning-input 
+                type="text" 
+                variant="label-hidden"
+                onchange={setValue}
+            >{massageInBox}</lightning-input>
+        </div>
+        
+        <div class="acceptButton">
+            <lightning-button variant="success" label="Put text on page" onclick={pressButton}></lightning-button>
+        </div>        
+    </lightning-button-group>
+</template>

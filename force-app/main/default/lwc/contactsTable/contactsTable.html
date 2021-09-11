@@ -1,0 +1,53 @@
+<!-- sldsValidatorIgnore -->
+<template>   
+    <div class="searchInput" onchange={handleKeyUp}>
+        <lightning-input
+            name="enter-search-name"
+            type="search"
+            variant="hidden-label"
+        ></lightning-input>
+    </div>
+
+    
+    <div class="table">
+        <div if:true={haveData}>
+            <div if:true={loaded}>
+                <table class="slds-table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </thead>
+                    <tbody>
+                        <template for:each={contactsView} for:item="itemView">
+                            <tr key={itemView.Id} ondblclick={showDetails}>
+                                <td>{itemView.Name}</td>
+                                <td>{itemView.Email}</td>
+                                <td>{itemView.Phone}</td>
+                            </tr>
+                        </template>  
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <div if:false={loaded}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </div>            
+                    
+            <div class="paggination">
+                <template for:each={contacts} for:item="item">
+                    <c-paggination 
+                        key={item} 
+                        record-count={item.numPage}
+                        onswitchpage={turnPage}
+                    ></c-paggination>
+                </template>
+            </div>
+        </div>  
+        <div if:false={haveData}>
+            <c-no-data></c-no-data>
+        </div>       
+    </div>    
+
+</template>
