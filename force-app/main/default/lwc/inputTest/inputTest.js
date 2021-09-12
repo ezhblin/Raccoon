@@ -1,3 +1,4 @@
+/* eslint-disable @lwc/lwc/no-api-reassignments */
 import { LightningElement, track, api } from "lwc";
 
 export default class InputTest extends LightningElement {
