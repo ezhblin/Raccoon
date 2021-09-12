@@ -1,14 +1,12 @@
 .paggination {
-    padding: 5px;
-    text-align: center;
+  padding: 5px;
+  text-align: center;
 }
 
 .searchInput {
-    padding: 5px;
-    border-radius: 0px;
-    --sds-c-input-radius-border: 0;
+  --sds-c-input-radius-border: 0;
 }
 
-.table {  
-    padding: 5px;
+.table {
+  padding: 5px;
 }

@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <div if:true={haveData}>
+      <table class="slds-table">
+        <thead onclick={getSort}>
+          <th>Name</th>
+          <th>Website</th>
+        </thead>
+
+        <tbody>
+          <template for:each={accountsView} for:item="itemView">
+            <tr key={itemView.Id}>
+              <td>{itemView.Name}</td>
+              <td>{itemView.Website}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+
+    <div if:false={haveData}>
+      <c-no-data></c-no-data>
+    </div>
+  </div>
+</template>

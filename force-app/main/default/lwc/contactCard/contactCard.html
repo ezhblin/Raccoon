@@ -1,0 +1,17 @@
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Details"
+    icon-name="standard:contact"
+    hidden={hideCard}
+  >
+    <table class="slds-table">
+      <template for:each={record} for:item="field">
+        <tr key={field}>
+          <td>{field.FieldName}</td>
+          <td>{field.Value}</td>
+        </tr>
+      </template>
+    </table>
+  </lightning-card>
+</template>
