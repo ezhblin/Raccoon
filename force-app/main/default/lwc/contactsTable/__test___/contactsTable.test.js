@@ -1,5 +1,5 @@
 import { createElement } from "lwc";
-import contactComponent from "c/contactTable";
+import contactComponent from "c/contactsTable";
 
 describe("First test", () => {
   afterEach(() => {
