@@ -1,6 +1,7 @@
 // import { createElement } from "lwc";
 // import contactComponent from "c/contactsTable";
 
+// eslint-disable-next-line jest/no-commented-out-tests
 // describe("First test", () => {
 //   afterEach(() => {
 //     while (document.body.firstChild) {
@@ -8,6 +9,7 @@
 //     }
 //   });
 
+// eslint-disable-next-line jest/no-commented-out-tests
 //   it("display greeting", () => {
 //     let element = createElement("c-contactComponent", {
 //       is: contactComponent
