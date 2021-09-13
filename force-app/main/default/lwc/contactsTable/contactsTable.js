@@ -61,17 +61,12 @@ export default class ContactsTable extends LightningElement {
     }
 
     showDetails(event) {
-        this.template
-            .querySelector("c-contact-card")
-            .viewDetails(event.target.value);
+        this.template.querySelector("c-contact-card").viewDetails(event.target.value);
+
     }
 
     getSort() {
         this.asc = !this.asc;
-        sortByName(this.contactsView, this.asc);
-    }
-
-    renderedCallback() {
-        console.log("Contact-rendered");
+        this.contactsView = sortByName(this.contactsView, this.asc);
     }
 }

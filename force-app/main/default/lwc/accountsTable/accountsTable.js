@@ -20,10 +20,6 @@ export default class AccountsTable extends LightningElement {
 
     getSort() {
         this.asc = !this.asc;
-        sortByName(this.accountsView, this.asc);
-    }
-
-    renderedCallback() {
-        console.log("Account-rendered");
+        this.accountsView = sortByName(this.accountsView, this.asc);
     }
 }

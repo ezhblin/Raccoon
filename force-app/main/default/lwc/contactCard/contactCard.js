@@ -11,7 +11,7 @@ export default class ContactCard extends LightningElement {
     recordId;
     hideCard = true;
 
-    @wire(getRecord, { recordIds: "$recordId", optionalFields: FIELDS })
+    @wire(getRecord, { recordId: "$recordId", optionalFields: FIELDS })
     getContactInfo(result) {
         this.wiredData = result;
         this.record = [];
