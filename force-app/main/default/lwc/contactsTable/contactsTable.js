@@ -9,15 +9,14 @@ export default class ContactsTable extends LightningElement {
     @track contacts = [];
 
     haveData = false;
-    searchKey;
+    searchKey = '';
     page = 1;
     wiredData;
-    loaded;
+    loaded = false;
     asc = true;
 
     @wire(getContacts, { searchKey: "$searchKey" })
     getContactApex(result) {
-        this.loaded = false;
         this.wiredData = result;
         if (this.wiredData.data) {
             this.contacts = [];
