@@ -2,14 +2,14 @@
 import { LightningElement, track, api } from "lwc";
 
 export default class InputTest extends LightningElement {
-  @api myMassageToPage;
-  @track massageInBox;
+    @api myMassageToPage;
+    @track massageInBox;
 
-  pressButton() {
-    this.myMassageToPage = this.massageInBox;
-  }
+    pressButton() {
+        this.myMassageToPage = this.massageInBox;
+    }
 
-  setValue(event) {
-    this.massageInBox = event.target.value;
-  }
+    setValue(event) {
+        this.massageInBox = event.target.value;
+    }
 }
